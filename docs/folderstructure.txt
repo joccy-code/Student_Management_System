@@ -1,0 +1,89 @@
+sms-system/
+│
+├── backend/                        # Node.js + Express API
+│   ├── src/
+│   │   ├── config/                 # Environment & DB configurations
+│   │   │   ├── db.js               # MySQL connection setup
+│   │   │   └── env.js              # Environment variables (dotenv)
+│   │   │
+│   │   ├── models/                 # Database models
+│   │   │   ├── user.model.js
+│   │   │   ├── student.model.js
+│   │   │   ├── teacher.model.js
+│   │   │   ├── subject.model.js
+│   │   │   ├── assessment.model.js
+│   │   │   ├── weight_setting.model.js
+│   │   │   ├── grade.model.js
+│   │   │   ├── feedback.model.js
+│   │   │   └── attendance.model.js
+│   │   │
+│   │   ├── controllers/            # Business logic
+│   │   │   ├── auth.controller.js
+│   │   │   ├── student.controller.js
+│   │   │   ├── teacher.controller.js
+│   │   │   ├── grade.controller.js
+│   │   │   ├── assessment.controller.js
+│   │   │   ├── feedback.controller.js
+│   │   │   └── attendance.controller.js
+│   │   │
+│   │   ├── routes/                 # API routes
+│   │   │   ├── auth.routes.js
+│   │   │   ├── student.routes.js
+│   │   │   ├── teacher.routes.js
+│   │   │   ├── grade.routes.js
+│   │   │   ├── assessment.routes.js
+│   │   │   ├── feedback.routes.js
+│   │   │   └── attendance.routes.js
+│   │   │
+│   │   ├── middleware/             # Security & validation
+│   │   │   ├── auth.middleware.js  # JWT authentication
+│   │   │   ├── role.middleware.js  # Role-based access control
+│   │   │   └── error.middleware.js # Global error handler
+│   │   │
+│   │   ├── services/               # Helper services
+│   │   │   ├── email.service.js
+│   │   │   ├── id_generator.js     # Generate IDs like SU0001
+│   │   │   ├── grade_calculator.js # Calculate final scores
+│   │   │   └── logger.js
+│   │   │
+│   │   ├── utils/                  # Utility functions
+│   │   │   ├── constants.js
+│   │   │   └── validation.js
+│   │   │
+│   │   ├── app.js                  # Express app setup
+│   │   └── server.js               # Entry point
+│   │
+│   ├── package.json
+│   ├── .env
+│   └── README.md
+│
+├── frontend/                       # React (Vite or CRA)
+│   ├── src/
+│   │   ├── api/                    # Axios API handlers
+│   │   ├── assets/                 # Images, icons, etc.
+│   │   ├── components/             # Reusable UI components
+│   │   ├── pages/                  # Screens (Dashboard, Login, etc.)
+│   │   │   ├── Auth/
+│   │   │   ├── Admin/
+│   │   │   ├── Teacher/
+│   │   │   ├── Student/
+│   │   │   └── Parent/
+│   │   ├── hooks/                  # Custom React hooks
+│   │   ├── context/                # Global state (Auth, Role, etc.)
+│   │   ├── utils/                  # Frontend helpers
+│   │   ├── App.jsx
+│   │   ├── main.jsx
+│   │   └── routes.jsx
+│   │
+│   ├── package.json
+│   ├── .env
+│   └── README.md
+│
+├── docs/                           # Documentation
+│   ├── database_design.sql
+│   ├── ERD_diagram.png
+│   └── project_plan.md
+│
+├── .gitignore
+├── README.md
+└── docker-compose.yml              # Optional for containerized deployment
